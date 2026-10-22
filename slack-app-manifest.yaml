@@ -1,0 +1,8 @@
+display_information:
+  name: Monday.com PeakVital (Mock)
+  description: Mock Monday.com work OS for PeakVital — a U.S.-based premium bovine colostrum wellness brand. Exposes boards, items, updates, and dashboards across Product, Marketing, and Science workspaces to Slack AI.
+
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

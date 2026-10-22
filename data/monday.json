@@ -1,0 +1,913 @@
+{
+  "workspaces": [
+    {
+      "id": "ws-001",
+      "name": "Product & Operations",
+      "kind": "open",
+      "created_at": "2024-01-10T09:00:00Z",
+      "description": "Supply chain, sourcing, manufacturing, and fulfillment"
+    },
+    {
+      "id": "ws-002",
+      "name": "Marketing & Growth",
+      "kind": "open",
+      "created_at": "2024-01-10T09:05:00Z",
+      "description": "Brand, content, paid media, influencer, and retention"
+    },
+    {
+      "id": "ws-003",
+      "name": "Science & Regulatory",
+      "kind": "private",
+      "created_at": "2024-02-01T09:00:00Z",
+      "description": "R&D, clinical studies, quality assurance, and compliance"
+    }
+  ],
+  "folders": [
+    {
+      "id": "fld-001",
+      "name": "Supply Chain",
+      "workspace_id": "ws-001"
+    },
+    {
+      "id": "fld-002",
+      "name": "Campaigns",
+      "workspace_id": "ws-002"
+    },
+    {
+      "id": "fld-003",
+      "name": "Research & Compliance",
+      "workspace_id": "ws-003"
+    }
+  ],
+  "boards": [
+    {
+      "id": "brd-001",
+      "name": "Product Launch Tracker",
+      "workspace_id": "ws-001",
+      "folder_id": "fld-001",
+      "state": "active",
+      "tags": ["product", "launch", "roadmap"],
+      "created_at": "2024-02-15T10:00:00Z",
+      "description": "Tracks new product development milestones from concept to shelf"
+    },
+    {
+      "id": "brd-002",
+      "name": "Sourcing & Supplier Management",
+      "workspace_id": "ws-001",
+      "folder_id": "fld-001",
+      "state": "active",
+      "tags": ["sourcing", "suppliers", "colostrum", "quality"],
+      "created_at": "2024-03-01T10:00:00Z",
+      "description": "Manages dairy farm partnerships, CoA reviews, and supplier audits"
+    },
+    {
+      "id": "brd-003",
+      "name": "Fulfillment & Inventory",
+      "workspace_id": "ws-001",
+      "folder_id": "fld-001",
+      "state": "active",
+      "tags": ["inventory", "3PL", "fulfillment", "DTC"],
+      "created_at": "2024-03-10T08:00:00Z",
+      "description": "3PL coordination, stock levels, and reorder point alerts"
+    },
+    {
+      "id": "brd-004",
+      "name": "Marketing Campaign Calendar",
+      "workspace_id": "ws-002",
+      "folder_id": "fld-002",
+      "state": "active",
+      "tags": ["marketing", "campaigns", "calendar", "paid-media"],
+      "created_at": "2024-04-01T09:00:00Z",
+      "description": "Quarterly campaign planning, asset production, and go-live tracking"
+    },
+    {
+      "id": "brd-005",
+      "name": "Influencer & Creator Program",
+      "workspace_id": "ws-002",
+      "folder_id": "fld-002",
+      "state": "active",
+      "tags": ["influencer", "ugc", "creator", "partnerships"],
+      "created_at": "2024-04-15T09:00:00Z",
+      "description": "Seeding, contract management, content review, and performance tracking"
+    },
+    {
+      "id": "brd-006",
+      "name": "Retention & Subscription",
+      "workspace_id": "ws-002",
+      "folder_id": "fld-002",
+      "state": "active",
+      "tags": ["retention", "subscription", "LTV", "churn"],
+      "created_at": "2024-05-01T09:00:00Z",
+      "description": "Subscriber lifecycle flows, churn reduction experiments, and LTV initiatives"
+    },
+    {
+      "id": "brd-007",
+      "name": "Clinical Research Pipeline",
+      "workspace_id": "ws-003",
+      "folder_id": "fld-003",
+      "state": "active",
+      "tags": ["clinical", "research", "RCT", "gut-health"],
+      "created_at": "2024-06-01T11:00:00Z",
+      "description": "Ongoing and planned clinical studies on bovine colostrum biomarkers"
+    },
+    {
+      "id": "brd-008",
+      "name": "Regulatory & Certifications",
+      "workspace_id": "ws-003",
+      "folder_id": "fld-003",
+      "state": "active",
+      "tags": ["regulatory", "FDA", "NSF", "certifications", "compliance"],
+      "created_at": "2024-06-15T11:00:00Z",
+      "description": "Label claims review, NSF recertification, and FDA correspondence"
+    }
+  ],
+  "groups": [
+    { "id": "grp-001-1", "board_id": "brd-001", "board_name": "Product Launch Tracker", "title": "In Discovery", "color": "#579bfc", "archived": false },
+    { "id": "grp-001-2", "board_id": "brd-001", "board_name": "Product Launch Tracker", "title": "In Development", "color": "#fdab3d", "archived": false },
+    { "id": "grp-001-3", "board_id": "brd-001", "board_name": "Product Launch Tracker", "title": "Ready to Launch", "color": "#00c875", "archived": false },
+    { "id": "grp-001-4", "board_id": "brd-001", "board_name": "Product Launch Tracker", "title": "Launched", "color": "#a25ddc", "archived": false },
+
+    { "id": "grp-002-1", "board_id": "brd-002", "board_name": "Sourcing & Supplier Management", "title": "Active Suppliers", "color": "#00c875", "archived": false },
+    { "id": "grp-002-2", "board_id": "brd-002", "board_name": "Sourcing & Supplier Management", "title": "Pending Audit", "color": "#fdab3d", "archived": false },
+    { "id": "grp-002-3", "board_id": "brd-002", "board_name": "Sourcing & Supplier Management", "title": "Under Review", "color": "#579bfc", "archived": false },
+
+    { "id": "grp-003-1", "board_id": "brd-003", "board_name": "Fulfillment & Inventory", "title": "In Stock", "color": "#00c875", "archived": false },
+    { "id": "grp-003-2", "board_id": "brd-003", "board_name": "Fulfillment & Inventory", "title": "Low Stock", "color": "#fdab3d", "archived": false },
+    { "id": "grp-003-3", "board_id": "brd-003", "board_name": "Fulfillment & Inventory", "title": "Out of Stock", "color": "#e2445c", "archived": false },
+    { "id": "grp-003-4", "board_id": "brd-003", "board_name": "Fulfillment & Inventory", "title": "Incoming PO", "color": "#579bfc", "archived": false },
+
+    { "id": "grp-004-1", "board_id": "brd-004", "board_name": "Marketing Campaign Calendar", "title": "Q4 2026", "color": "#579bfc", "archived": false },
+    { "id": "grp-004-2", "board_id": "brd-004", "board_name": "Marketing Campaign Calendar", "title": "Q1 2027", "color": "#fdab3d", "archived": false },
+    { "id": "grp-004-3", "board_id": "brd-004", "board_name": "Marketing Campaign Calendar", "title": "Completed", "color": "#a25ddc", "archived": false },
+
+    { "id": "grp-005-1", "board_id": "brd-005", "board_name": "Influencer & Creator Program", "title": "Prospecting", "color": "#579bfc", "archived": false },
+    { "id": "grp-005-2", "board_id": "brd-005", "board_name": "Influencer & Creator Program", "title": "Seeded / Awaiting Content", "color": "#fdab3d", "archived": false },
+    { "id": "grp-005-3", "board_id": "brd-005", "board_name": "Influencer & Creator Program", "title": "Content Live", "color": "#00c875", "archived": false },
+    { "id": "grp-005-4", "board_id": "brd-005", "board_name": "Influencer & Creator Program", "title": "Paid Partners", "color": "#a25ddc", "archived": false },
+
+    { "id": "grp-006-1", "board_id": "brd-006", "board_name": "Retention & Subscription", "title": "Active Experiments", "color": "#579bfc", "archived": false },
+    { "id": "grp-006-2", "board_id": "brd-006", "board_name": "Retention & Subscription", "title": "In Review", "color": "#fdab3d", "archived": false },
+    { "id": "grp-006-3", "board_id": "brd-006", "board_name": "Retention & Subscription", "title": "Shipped", "color": "#00c875", "archived": false },
+
+    { "id": "grp-007-1", "board_id": "brd-007", "board_name": "Clinical Research Pipeline", "title": "Planning", "color": "#579bfc", "archived": false },
+    { "id": "grp-007-2", "board_id": "brd-007", "board_name": "Clinical Research Pipeline", "title": "Enrolling", "color": "#fdab3d", "archived": false },
+    { "id": "grp-007-3", "board_id": "brd-007", "board_name": "Clinical Research Pipeline", "title": "Data Collection", "color": "#00c875", "archived": false },
+    { "id": "grp-007-4", "board_id": "brd-007", "board_name": "Clinical Research Pipeline", "title": "Analysis & Publication", "color": "#a25ddc", "archived": false },
+
+    { "id": "grp-008-1", "board_id": "brd-008", "board_name": "Regulatory & Certifications", "title": "In Progress", "color": "#fdab3d", "archived": false },
+    { "id": "grp-008-2", "board_id": "brd-008", "board_name": "Regulatory & Certifications", "title": "Submitted / Pending", "color": "#579bfc", "archived": false },
+    { "id": "grp-008-3", "board_id": "brd-008", "board_name": "Regulatory & Certifications", "title": "Certified / Approved", "color": "#00c875", "archived": false },
+    { "id": "grp-008-4", "board_id": "brd-008", "board_name": "Regulatory & Certifications", "title": "Needs Renewal", "color": "#e2445c", "archived": false }
+  ],
+  "items": [
+    {
+      "id": "itm-1001",
+      "name": "Colostrum + Elderberry Immune Gummies",
+      "board_id": "brd-001",
+      "board_name": "Product Launch Tracker",
+      "group_id": "grp-001-2",
+      "group_name": "In Development",
+      "state": "active",
+      "created_at": "2026-06-01T10:00:00Z",
+      "updated_at": "2026-10-15T14:22:00Z",
+      "creator_name": "Tara Ellis",
+      "assignee_names": ["Tara Ellis", "Dr. Priya Nair"],
+      "tags": ["new-product", "immune", "gummies"],
+      "column_values": {
+        "status": "In Development",
+        "priority": "High",
+        "due_date": "2027-02-01",
+        "progress_pct": 45,
+        "notes": "Formulation at 60% IgG per gummy. Working with CMO to optimize gelling agent compatibility with colostrum proteins. Flavor profile TBD — lemon-elderberry leading."
+      }
+    },
+    {
+      "id": "itm-1002",
+      "name": "PeakVital Liposomal Colostrum (High-Absorption)",
+      "board_id": "brd-001",
+      "board_name": "Product Launch Tracker",
+      "group_id": "grp-001-1",
+      "group_name": "In Discovery",
+      "state": "active",
+      "created_at": "2026-08-10T10:00:00Z",
+      "updated_at": "2026-10-01T09:00:00Z",
+      "creator_name": "James Kwon",
+      "assignee_names": ["James Kwon", "Dr. Marcus Chen"],
+      "tags": ["new-product", "liposomal", "biohacker"],
+      "column_values": {
+        "status": "Discovery",
+        "priority": "Medium",
+        "due_date": "2027-06-01",
+        "progress_pct": 10,
+        "notes": "Exploring liposomal encapsulation to improve IgG bioavailability past gastric acid. Initial feasibility review with CMO partner underway. Price point concern — estimated COGS $28-32."
+      }
+    },
+    {
+      "id": "itm-1003",
+      "name": "Travel Stick Packs — Restock & Relaunch",
+      "board_id": "brd-001",
+      "board_name": "Product Launch Tracker",
+      "group_id": "grp-001-3",
+      "group_name": "Ready to Launch",
+      "state": "active",
+      "created_at": "2026-09-01T10:00:00Z",
+      "updated_at": "2026-10-18T11:00:00Z",
+      "creator_name": "Tara Ellis",
+      "assignee_names": ["Tara Ellis"],
+      "tags": ["restock", "travel", "stick-packs"],
+      "column_values": {
+        "status": "Ready to Launch",
+        "priority": "Critical",
+        "due_date": "2026-11-10",
+        "progress_pct": 90,
+        "notes": "Manufacturing complete. 15,000 units in transit from CMO. ETA to 3PL: Nov 8. Pre-order email draft ready in Klaviyo. Launch email scheduled for Nov 11."
+      }
+    },
+    {
+      "id": "itm-1004",
+      "name": "PeakVital Pure Colostrum Powder — Q4 Reorder",
+      "board_id": "brd-001",
+      "board_name": "Product Launch Tracker",
+      "group_id": "grp-001-4",
+      "group_name": "Launched",
+      "state": "active",
+      "created_at": "2026-07-15T10:00:00Z",
+      "updated_at": "2026-09-20T10:00:00Z",
+      "creator_name": "Tara Ellis",
+      "assignee_names": ["Tara Ellis"],
+      "tags": ["reorder", "core-sku"],
+      "column_values": {
+        "status": "Launched",
+        "priority": "High",
+        "due_date": "2026-09-15",
+        "progress_pct": 100,
+        "notes": "20,000 units received at 3PL on Sep 18. Updated packaging with new CoA QR code. Vanilla Bean variant sold out within 72hrs — flagging for larger run next cycle."
+      }
+    },
+    {
+      "id": "itm-2001",
+      "name": "Hillcrest Dairy Farms — Annual Audit",
+      "board_id": "brd-002",
+      "board_name": "Sourcing & Supplier Management",
+      "group_id": "grp-002-2",
+      "group_name": "Pending Audit",
+      "state": "active",
+      "created_at": "2026-08-01T09:00:00Z",
+      "updated_at": "2026-10-10T14:00:00Z",
+      "creator_name": "Tara Ellis",
+      "assignee_names": ["Tara Ellis"],
+      "tags": ["supplier", "audit", "dairy-farm"],
+      "column_values": {
+        "status": "Pending Audit",
+        "priority": "High",
+        "due_date": "2026-11-30",
+        "progress_pct": 20,
+        "notes": "Scheduling on-site audit for November. Confirming third-party auditor (Eurofins preferred). Previous audit passed with zero critical findings. Need updated Animal Welfare Approved cert."
+      }
+    },
+    {
+      "id": "itm-2002",
+      "name": "Meadowbrook Farms — New Supplier Onboarding",
+      "board_id": "brd-002",
+      "board_name": "Sourcing & Supplier Management",
+      "group_id": "grp-002-3",
+      "group_name": "Under Review",
+      "state": "active",
+      "created_at": "2026-09-15T09:00:00Z",
+      "updated_at": "2026-10-12T10:00:00Z",
+      "creator_name": "Tara Ellis",
+      "assignee_names": ["Tara Ellis", "Dr. Priya Nair"],
+      "tags": ["supplier", "onboarding", "dairy-farm"],
+      "column_values": {
+        "status": "Under Review",
+        "priority": "Medium",
+        "due_date": "2026-12-15",
+        "progress_pct": 35,
+        "notes": "First-milking yield data received. IgG concentration averaging 38% — borderline for our 40% minimum spec. Requesting 3 additional lot samples. USDA Organic cert current through 2027."
+      }
+    },
+    {
+      "id": "itm-2003",
+      "name": "Great Lakes Colostrum Co — Active Contract Renewal",
+      "board_id": "brd-002",
+      "board_name": "Sourcing & Supplier Management",
+      "group_id": "grp-002-1",
+      "group_name": "Active Suppliers",
+      "state": "active",
+      "created_at": "2026-01-01T09:00:00Z",
+      "updated_at": "2026-10-05T09:00:00Z",
+      "creator_name": "Tara Ellis",
+      "assignee_names": ["Tara Ellis"],
+      "tags": ["supplier", "contract", "primary-supplier"],
+      "column_values": {
+        "status": "Active",
+        "priority": "High",
+        "due_date": "2026-12-31",
+        "progress_pct": 60,
+        "notes": "Primary supplier. Contract expires Dec 31. Negotiating 2027 pricing — requesting 5% volume discount given 40% YOY volume increase. Legal review of updated MSA in progress."
+      }
+    },
+    {
+      "id": "itm-3001",
+      "name": "PV-CP-100 Pure Powder — Inventory Status",
+      "board_id": "brd-003",
+      "board_name": "Fulfillment & Inventory",
+      "group_id": "grp-003-1",
+      "group_name": "In Stock",
+      "state": "active",
+      "created_at": "2026-09-20T08:00:00Z",
+      "updated_at": "2026-10-20T08:00:00Z",
+      "creator_name": "Ops System",
+      "assignee_names": ["Tara Ellis"],
+      "tags": ["inventory", "core-sku", "powder"],
+      "column_values": {
+        "status": "In Stock",
+        "priority": "Normal",
+        "due_date": null,
+        "progress_pct": null,
+        "notes": "Units on hand: 14,820. Daily velocity: ~180 units. Days of supply: ~82. Reorder point: 5,000 units. Next PO due: Jan 2027."
+      }
+    },
+    {
+      "id": "itm-3002",
+      "name": "PV-TSP-30 Travel Stick Packs — Inventory Status",
+      "board_id": "brd-003",
+      "board_name": "Fulfillment & Inventory",
+      "group_id": "grp-003-3",
+      "group_name": "Out of Stock",
+      "state": "active",
+      "created_at": "2026-10-01T08:00:00Z",
+      "updated_at": "2026-10-20T08:00:00Z",
+      "creator_name": "Ops System",
+      "assignee_names": ["Tara Ellis"],
+      "tags": ["inventory", "stick-packs", "oos"],
+      "column_values": {
+        "status": "Out of Stock",
+        "priority": "Critical",
+        "due_date": "2026-11-08",
+        "progress_pct": null,
+        "notes": "Sold out Oct 3. 15,000 units in transit. ETA 3PL: Nov 8. Pre-orders enabled on site. ~1,200 pre-orders queued as of Oct 20."
+      }
+    },
+    {
+      "id": "itm-3003",
+      "name": "PV-CPB-60 Colostrum + Prebiotic — Inventory Status",
+      "board_id": "brd-003",
+      "board_name": "Fulfillment & Inventory",
+      "group_id": "grp-003-2",
+      "group_name": "Low Stock",
+      "state": "active",
+      "created_at": "2026-10-05T08:00:00Z",
+      "updated_at": "2026-10-20T08:00:00Z",
+      "creator_name": "Ops System",
+      "assignee_names": ["Tara Ellis"],
+      "tags": ["inventory", "prebiotic-blend", "low-stock"],
+      "column_values": {
+        "status": "Low Stock",
+        "priority": "High",
+        "due_date": "2026-10-28",
+        "progress_pct": null,
+        "notes": "Units on hand: 620. Daily velocity: ~45. Days of supply: ~14. PO submitted Oct 18 for 8,000 units. Expected receipt: Oct 28."
+      }
+    },
+    {
+      "id": "itm-3004",
+      "name": "PO-2026-047 — Prebiotic Blend Restock",
+      "board_id": "brd-003",
+      "board_name": "Fulfillment & Inventory",
+      "group_id": "grp-003-4",
+      "group_name": "Incoming PO",
+      "state": "active",
+      "created_at": "2026-10-18T09:00:00Z",
+      "updated_at": "2026-10-18T09:00:00Z",
+      "creator_name": "Tara Ellis",
+      "assignee_names": ["Tara Ellis"],
+      "tags": ["PO", "incoming", "prebiotic-blend"],
+      "column_values": {
+        "status": "In Transit",
+        "priority": "High",
+        "due_date": "2026-10-28",
+        "progress_pct": null,
+        "notes": "PO #2026-047. 8,000 units PV-CPB-60. Shipped from CMO Oct 19. Tracking: UPS 1Z999AA10199887766. ETA 3PL (Chicago): Oct 28."
+      }
+    },
+    {
+      "id": "itm-4001",
+      "name": "Q4 2026 Holiday Gift Campaign",
+      "board_id": "brd-004",
+      "board_name": "Marketing Campaign Calendar",
+      "group_id": "grp-004-1",
+      "group_name": "Q4 2026",
+      "state": "active",
+      "created_at": "2026-09-01T10:00:00Z",
+      "updated_at": "2026-10-19T14:00:00Z",
+      "creator_name": "Sofia Reyes",
+      "assignee_names": ["Sofia Reyes", "Nora Hayes"],
+      "tags": ["holiday", "email", "paid-social", "gifting"],
+      "column_values": {
+        "status": "In Progress",
+        "priority": "Critical",
+        "due_date": "2026-11-25",
+        "progress_pct": 55,
+        "notes": "Holiday bundle (powder + capsules) hero product. Email sequences drafted (6-email series). Meta and TikTok creatives in review. Influencer gifting list finalized — 40 creators. Landing page wireframe approved, dev in progress."
+      }
+    },
+    {
+      "id": "itm-4002",
+      "name": "Travel Stick Pack Relaunch — Email + Paid",
+      "board_id": "brd-004",
+      "board_name": "Marketing Campaign Calendar",
+      "group_id": "grp-004-1",
+      "group_name": "Q4 2026",
+      "state": "active",
+      "created_at": "2026-10-05T10:00:00Z",
+      "updated_at": "2026-10-20T09:00:00Z",
+      "creator_name": "Sofia Reyes",
+      "assignee_names": ["Sofia Reyes"],
+      "tags": ["relaunch", "email", "stick-packs", "paid-meta"],
+      "column_values": {
+        "status": "In Progress",
+        "priority": "High",
+        "due_date": "2026-11-11",
+        "progress_pct": 70,
+        "notes": "Pre-order announcement email scheduled Nov 5. Restock email queued for Nov 11. Meta campaign targeting lapsed buyers and lookalike audience. Budget: $12,000."
+      }
+    },
+    {
+      "id": "itm-4003",
+      "name": "New Year New Gut Health Campaign",
+      "board_id": "brd-004",
+      "board_name": "Marketing Campaign Calendar",
+      "group_id": "grp-004-2",
+      "group_name": "Q1 2027",
+      "state": "active",
+      "created_at": "2026-10-10T10:00:00Z",
+      "updated_at": "2026-10-15T10:00:00Z",
+      "creator_name": "Sofia Reyes",
+      "assignee_names": ["Sofia Reyes", "Dr. Priya Nair"],
+      "tags": ["new-year", "gut-health", "email", "content"],
+      "column_values": {
+        "status": "Planning",
+        "priority": "High",
+        "due_date": "2027-01-03",
+        "progress_pct": 15,
+        "notes": "Targeting Jan 1-15 window. Angle: gut-reset after holiday excess. Educational content series planned (3 KB articles + 2 videos). Collaborating with Dr. Nair on clinical messaging. Budget TBD — pending Q1 marketing planning."
+      }
+    },
+    {
+      "id": "itm-5001",
+      "name": "@wellnesswithwren — Gifting & Content Review",
+      "board_id": "brd-005",
+      "board_name": "Influencer & Creator Program",
+      "group_id": "grp-005-3",
+      "group_name": "Content Live",
+      "state": "active",
+      "created_at": "2026-08-01T10:00:00Z",
+      "updated_at": "2026-10-10T09:00:00Z",
+      "creator_name": "Nora Hayes",
+      "assignee_names": ["Nora Hayes"],
+      "tags": ["influencer", "ugc", "instagram", "gut-health"],
+      "column_values": {
+        "status": "Content Live",
+        "priority": "Normal",
+        "due_date": null,
+        "progress_pct": 100,
+        "notes": "1 Reel + 3 Stories posted Sep 28. Reel: 284K views, 6.2% engagement rate. Stories: avg 42K impressions. Coupon code WREN15 generated $18,400 in attributable GMV. Strong performer — flag for paid partnership."
+      }
+    },
+    {
+      "id": "itm-5002",
+      "name": "@drfitlife — Paid Partnership Q4",
+      "board_id": "brd-005",
+      "board_name": "Influencer & Creator Program",
+      "group_id": "grp-005-4",
+      "group_name": "Paid Partners",
+      "state": "active",
+      "created_at": "2026-09-10T10:00:00Z",
+      "updated_at": "2026-10-18T10:00:00Z",
+      "creator_name": "Nora Hayes",
+      "assignee_names": ["Nora Hayes"],
+      "tags": ["paid-partner", "youtube", "performance", "athlete"],
+      "column_values": {
+        "status": "Active",
+        "priority": "High",
+        "due_date": "2026-12-31",
+        "progress_pct": 40,
+        "notes": "6-month paid deal signed Sep 15. $8,500/mo + 10% rev share on code DRFIT. Deliverables: 2 YouTube integrations/mo + 4 Shorts. Oct integration published — 520K views. On track."
+      }
+    },
+    {
+      "id": "itm-5003",
+      "name": "@lauramindfulbody — Seeding",
+      "board_id": "brd-005",
+      "board_name": "Influencer & Creator Program",
+      "group_id": "grp-005-2",
+      "group_name": "Seeded / Awaiting Content",
+      "state": "active",
+      "created_at": "2026-10-01T10:00:00Z",
+      "updated_at": "2026-10-14T10:00:00Z",
+      "creator_name": "Nora Hayes",
+      "assignee_names": ["Nora Hayes"],
+      "tags": ["seeding", "tiktok", "beauty", "skin-health"],
+      "column_values": {
+        "status": "Awaiting Content",
+        "priority": "Normal",
+        "due_date": "2026-11-15",
+        "progress_pct": 20,
+        "notes": "Package delivered Oct 8 (confirmed via tracking). 30-day content window. Beauty/skin angle preferred — sent Pure Powder + Capsules. Follow up if no content by Nov 1."
+      }
+    },
+    {
+      "id": "itm-5004",
+      "name": "@performanceathletics.co — Prospect",
+      "board_id": "brd-005",
+      "board_name": "Influencer & Creator Program",
+      "group_id": "grp-005-1",
+      "group_name": "Prospecting",
+      "state": "active",
+      "created_at": "2026-10-12T10:00:00Z",
+      "updated_at": "2026-10-12T10:00:00Z",
+      "creator_name": "Nora Hayes",
+      "assignee_names": ["Nora Hayes"],
+      "tags": ["prospecting", "instagram", "athlete", "fitness"],
+      "column_values": {
+        "status": "Prospecting",
+        "priority": "Normal",
+        "due_date": null,
+        "progress_pct": 5,
+        "notes": "2.1M Instagram followers. Macro fitness creator. Strong gut health and recovery content. DM sent Oct 12. Estimated paid rate: $15-20K/integration. Flagged for Q1 2027 partnership budget."
+      }
+    },
+    {
+      "id": "itm-6001",
+      "name": "Pause Flow Optimization — Reduce Churn at Cancel Step",
+      "board_id": "brd-006",
+      "board_name": "Retention & Subscription",
+      "group_id": "grp-006-1",
+      "group_name": "Active Experiments",
+      "state": "active",
+      "created_at": "2026-09-20T09:00:00Z",
+      "updated_at": "2026-10-18T11:00:00Z",
+      "creator_name": "James Kwon",
+      "assignee_names": ["James Kwon", "Sofia Reyes"],
+      "tags": ["retention", "churn", "subscription", "AB-test"],
+      "column_values": {
+        "status": "In Progress",
+        "priority": "High",
+        "due_date": "2026-11-20",
+        "progress_pct": 60,
+        "notes": "A/B test: control (cancel confirm) vs. variant (pause for 30/60 days offer + 10% off). Running on Recharge. 3,200 users in test. Early data: variant showing 34% save rate vs. 8% control. Stat sig expected by Nov 15."
+      }
+    },
+    {
+      "id": "itm-6002",
+      "name": "Win-Back Email Flow — 90-Day Lapsed Subscribers",
+      "board_id": "brd-006",
+      "board_name": "Retention & Subscription",
+      "group_id": "grp-006-3",
+      "group_name": "Shipped",
+      "state": "active",
+      "created_at": "2026-08-01T09:00:00Z",
+      "updated_at": "2026-10-01T09:00:00Z",
+      "creator_name": "Sofia Reyes",
+      "assignee_names": ["Sofia Reyes"],
+      "tags": ["win-back", "email", "lapsed", "klaviyo"],
+      "column_values": {
+        "status": "Live",
+        "priority": "Normal",
+        "due_date": null,
+        "progress_pct": 100,
+        "notes": "5-email win-back series live since Sep 1. Targeting subscribers cancelled 90+ days ago. Email 1 (educational re-engagement): 38% open, 4.2% CTR. Email 3 (25% off offer): 6.1% conversion. Recovering ~$22K MRR/month. Monitor and refresh copy at 90-day mark."
+      }
+    },
+    {
+      "id": "itm-6003",
+      "name": "Post-Purchase Onboarding Flow — New Subscribers",
+      "board_id": "brd-006",
+      "board_name": "Retention & Subscription",
+      "group_id": "grp-006-2",
+      "group_name": "In Review",
+      "state": "active",
+      "created_at": "2026-10-01T09:00:00Z",
+      "updated_at": "2026-10-19T10:00:00Z",
+      "creator_name": "Sofia Reyes",
+      "assignee_names": ["Sofia Reyes", "Dr. Priya Nair"],
+      "tags": ["onboarding", "email", "new-subscriber", "education"],
+      "column_values": {
+        "status": "In Review",
+        "priority": "High",
+        "due_date": "2026-11-01",
+        "progress_pct": 75,
+        "notes": "7-email educational onboarding series. Dr. Nair reviewing scientific content accuracy. Covers: dosing protocol (Day 1), gut health science (Day 3), athlete benefits (Day 7), skin benefits (Day 14), microbiome deep-dive (Day 21). Design mockups approved. Launching Nov 1."
+      }
+    },
+    {
+      "id": "itm-7001",
+      "name": "RCT-001: Colostrum & Intestinal Permeability (Zonulin) — Phase 2",
+      "board_id": "brd-007",
+      "board_name": "Clinical Research Pipeline",
+      "group_id": "grp-007-3",
+      "group_name": "Data Collection",
+      "state": "active",
+      "created_at": "2025-11-01T09:00:00Z",
+      "updated_at": "2026-10-15T09:00:00Z",
+      "creator_name": "Dr. Priya Nair",
+      "assignee_names": ["Dr. Priya Nair", "Dr. Marcus Chen"],
+      "tags": ["RCT", "gut-permeability", "zonulin", "phase-2"],
+      "column_values": {
+        "status": "Data Collection",
+        "priority": "High",
+        "due_date": "2026-12-31",
+        "progress_pct": 65,
+        "notes": "N=180 (90 treatment / 90 placebo). 12-week intervention, 1.5g/day. Primary endpoint: serum zonulin. Secondary: stool sIgA, GSRS score, microbiome diversity. Enrollment complete. Week 8 data shows promising zonulin reduction in treatment arm (-31% vs. +4% placebo). Unblinding Dec 31. Target publication: Q2 2027."
+      }
+    },
+    {
+      "id": "itm-7002",
+      "name": "STUDY-002: Colostrum & Athletic Recovery (CRP, DOMS) — Planning",
+      "board_id": "brd-007",
+      "board_name": "Clinical Research Pipeline",
+      "group_id": "grp-007-1",
+      "group_name": "Planning",
+      "state": "active",
+      "created_at": "2026-09-01T09:00:00Z",
+      "updated_at": "2026-10-10T09:00:00Z",
+      "creator_name": "Dr. Marcus Chen",
+      "assignee_names": ["Dr. Marcus Chen"],
+      "tags": ["study", "athlete", "recovery", "CRP", "DOMS"],
+      "column_values": {
+        "status": "Planning",
+        "priority": "Medium",
+        "due_date": "2027-03-01",
+        "progress_pct": 20,
+        "notes": "Proposed N=80 (40/40). Endurance athletes. 8-week intervention at 2.5g/day. Primary endpoints: serum CRP, self-reported DOMS scale. IRB submission draft in review. Partnering with University of Wisconsin sports medicine dept. Funding: internal $85K budget approved."
+      }
+    },
+    {
+      "id": "itm-8001",
+      "name": "NSF Certified for Sport — 2027 Recertification",
+      "board_id": "brd-008",
+      "board_name": "Regulatory & Certifications",
+      "group_id": "grp-008-1",
+      "group_name": "In Progress",
+      "state": "active",
+      "created_at": "2026-07-01T09:00:00Z",
+      "updated_at": "2026-10-15T09:00:00Z",
+      "creator_name": "Dr. Priya Nair",
+      "assignee_names": ["Dr. Priya Nair"],
+      "tags": ["NSF", "certification", "recertification", "sport"],
+      "column_values": {
+        "status": "In Progress",
+        "priority": "Critical",
+        "due_date": "2026-12-01",
+        "progress_pct": 50,
+        "notes": "Current cert expires Feb 28 2027. Re-audit window opens Dec 1. Submitted updated product formulas and CoA packages to NSF. Awaiting scheduling of facility inspection. NSF contact: Sarah Kim. No formula changes anticipated — straightforward recert."
+      }
+    },
+    {
+      "id": "itm-8002",
+      "name": "FDA Structure-Function Claim Review — IGF-1 Labeling",
+      "board_id": "brd-008",
+      "board_name": "Regulatory & Certifications",
+      "group_id": "grp-008-2",
+      "group_name": "Submitted / Pending",
+      "state": "active",
+      "created_at": "2026-08-15T09:00:00Z",
+      "updated_at": "2026-10-01T09:00:00Z",
+      "creator_name": "Dr. Marcus Chen",
+      "assignee_names": ["Dr. Marcus Chen", "Dr. Priya Nair"],
+      "tags": ["FDA", "label-claim", "IGF-1", "structure-function"],
+      "column_values": {
+        "status": "Pending FDA Response",
+        "priority": "High",
+        "due_date": null,
+        "progress_pct": 70,
+        "notes": "Submitted structure-function notification for 'supports healthy muscle recovery' claim on Sep 10. 30-day FDA review window. Regulatory counsel (Wiley Rein) advising. Claim substantiated by 4 peer-reviewed citations. Expect clearance by Oct 12 — follow up if no response by Oct 25."
+      }
+    },
+    {
+      "id": "itm-8003",
+      "name": "USDA Organic Certification — New Prebiotic Blend SKU",
+      "board_id": "brd-008",
+      "board_name": "Regulatory & Certifications",
+      "group_id": "grp-008-1",
+      "group_name": "In Progress",
+      "state": "active",
+      "created_at": "2026-09-10T09:00:00Z",
+      "updated_at": "2026-10-05T09:00:00Z",
+      "creator_name": "Dr. Priya Nair",
+      "assignee_names": ["Dr. Priya Nair"],
+      "tags": ["USDA-organic", "certification", "prebiotic-blend"],
+      "column_values": {
+        "status": "In Progress",
+        "priority": "Medium",
+        "due_date": "2027-01-31",
+        "progress_pct": 30,
+        "notes": "Extending USDA Organic cert to cover PV-CPB-60. Prebiotic blend ingredients (inulin, XOS) sourced from USDA-certified organic suppliers. Certifying agent: Oregon Tilth. Application submitted Sep 10. Inspection expected Q4 2026."
+      }
+    }
+  ],
+  "updates": [
+    {
+      "id": "upd-001",
+      "item_id": "itm-1001",
+      "item_name": "Colostrum + Elderberry Immune Gummies",
+      "board_id": "brd-001",
+      "creator_name": "Dr. Priya Nair",
+      "created_at": "2026-10-15T14:22:00Z",
+      "body": "CMO confirmed the pectin-based gelling agent is compatible with IgG stability at pH 4.2. Moving forward with lemon-elderberry flavor. Shelf-life stability study at 25°C/60% RH initiated today — results in 8 weeks.",
+      "likes_count": 3,
+      "replies": []
+    },
+    {
+      "id": "upd-002",
+      "item_id": "itm-1001",
+      "item_name": "Colostrum + Elderberry Immune Gummies",
+      "board_id": "brd-001",
+      "creator_name": "Tara Ellis",
+      "created_at": "2026-10-16T09:00:00Z",
+      "body": "Packaging brief sent to design agency. Requesting 3 concepts by Oct 30. Target retail price: $54 (30-count). Subscription: $43.20.",
+      "likes_count": 1,
+      "replies": []
+    },
+    {
+      "id": "upd-003",
+      "item_id": "itm-3002",
+      "item_name": "PV-TSP-30 Travel Stick Packs — Inventory Status",
+      "board_id": "brd-003",
+      "creator_name": "Tara Ellis",
+      "created_at": "2026-10-18T08:30:00Z",
+      "body": "UPS tracking confirmed shipment left CMO facility Oct 19. 15,000 units. Chicago 3PL ETA Oct 28 → revised to Nov 8 due to UPS peak-season delay. Pre-order page updated with new ETA. 1,200+ pre-orders queued.",
+      "likes_count": 2,
+      "replies": []
+    },
+    {
+      "id": "upd-004",
+      "item_id": "itm-4001",
+      "item_name": "Q4 2026 Holiday Gift Campaign",
+      "board_id": "brd-004",
+      "creator_name": "Sofia Reyes",
+      "created_at": "2026-10-19T14:00:00Z",
+      "body": "Meta creative review complete — 4 static ads and 2 video ads approved. TikTok creative still needs one revision (font size on disclaimer). Email 1 of 6 finalized and QA'd in Klaviyo. Landing page dev ETA Oct 28.",
+      "likes_count": 4,
+      "replies": [
+        {
+          "creator_name": "Nora Hayes",
+          "created_at": "2026-10-19T15:10:00Z",
+          "body": "Influencer gifting kits ship Nov 1 — 40 creators. Brief includes holiday angle + gift-giving messaging. Content window Nov 1–25."
+        }
+      ]
+    },
+    {
+      "id": "upd-005",
+      "item_id": "itm-5001",
+      "item_name": "@wellnesswithwren — Gifting & Content Review",
+      "board_id": "brd-005",
+      "creator_name": "Nora Hayes",
+      "created_at": "2026-10-10T09:00:00Z",
+      "body": "WREN15 code performance: $18,400 GMV attributable in first 12 days. Outperforming our $10K avg for gifted creators. Proposing 3-month paid deal: $3,500/mo + code rev share. Sending offer this week.",
+      "likes_count": 6,
+      "replies": []
+    },
+    {
+      "id": "upd-006",
+      "item_id": "itm-6001",
+      "item_name": "Pause Flow Optimization — Reduce Churn at Cancel Step",
+      "board_id": "brd-006",
+      "creator_name": "James Kwon",
+      "created_at": "2026-10-18T11:00:00Z",
+      "body": "Week 4 interim data: variant save rate holding at 34% (n=1,840 reached cancel step). Control at 8%. Annualized MRR impact if we ship variant: ~$440K. Stat sig at 95% CI expected by Nov 10. Planning full rollout for Nov 20.",
+      "likes_count": 8,
+      "replies": []
+    },
+    {
+      "id": "upd-007",
+      "item_id": "itm-7001",
+      "item_name": "RCT-001: Colostrum & Intestinal Permeability (Zonulin) — Phase 2",
+      "board_id": "brd-007",
+      "creator_name": "Dr. Priya Nair",
+      "created_at": "2026-10-15T09:00:00Z",
+      "body": "Week 8 blinded data summary from CRO received. Treatment arm showing mean zonulin reduction of 31% from baseline (vs. +4% in placebo, p=0.003). Secondary endpoint stool sIgA trending positive. Unblinding and full analysis Dec 31. Strong signal for publication.",
+      "likes_count": 12,
+      "replies": [
+        {
+          "creator_name": "Dr. Marcus Chen",
+          "created_at": "2026-10-15T11:30:00Z",
+          "body": "Excellent. If effect size holds at unblinding, this is publishable in Nutrients or Gut Microbes. Start drafting methods section now so we're ready to move fast in January."
+        }
+      ]
+    },
+    {
+      "id": "upd-008",
+      "item_id": "itm-8002",
+      "item_name": "FDA Structure-Function Claim Review — IGF-1 Labeling",
+      "board_id": "brd-008",
+      "creator_name": "Dr. Marcus Chen",
+      "created_at": "2026-10-20T09:00:00Z",
+      "body": "No FDA response received as of Oct 20 (Day 40 post-submission). Following up with regulatory counsel. If no objection letter by Oct 28, we can proceed with label update. Prepping printer files.",
+      "likes_count": 2,
+      "replies": []
+    }
+  ],
+  "docs": [
+    {
+      "id": "doc-001",
+      "name": "PeakVital 2027 Product Roadmap",
+      "workspace_id": "ws-001",
+      "created_by": "Tara Ellis",
+      "created_at": "2026-09-15T10:00:00Z",
+      "updated_at": "2026-10-10T10:00:00Z",
+      "tags": ["roadmap", "product", "2027"],
+      "content": "H1 2027 priorities: (1) Travel Stick Pack volume scale, (2) Liposomal Colostrum feasibility decision, (3) Elderberry Gummies launch Q2. H2 2027 TBD pending H1 performance and clinical study outcomes."
+    },
+    {
+      "id": "doc-002",
+      "name": "Influencer Program Playbook",
+      "workspace_id": "ws-002",
+      "created_by": "Nora Hayes",
+      "created_at": "2026-05-01T09:00:00Z",
+      "updated_at": "2026-09-20T09:00:00Z",
+      "tags": ["influencer", "ugc", "playbook", "brand-guidelines"],
+      "content": "Tier framework: Nano (<50K, gifting only), Micro (50K-500K, gifting + performance bonus), Macro (500K+, paid deal). Min engagement rate: 3%. Category priorities: gut health, athlete/recovery, beauty/skin, biohacking. Content guidelines: authentic use, no hard sell, always include disclaimer. Preferred platforms: TikTok, Instagram, YouTube."
+    },
+    {
+      "id": "doc-003",
+      "name": "Scientific Claims Reference Guide",
+      "workspace_id": "ws-003",
+      "created_by": "Dr. Priya Nair",
+      "created_at": "2026-03-01T11:00:00Z",
+      "updated_at": "2026-10-05T11:00:00Z",
+      "tags": ["claims", "science", "regulatory", "approved-language"],
+      "content": "Approved structure-function claims: 'Supports gut barrier integrity', 'Supports healthy immune function', 'Supports muscle recovery'. Claims requiring additional substantiation before use: 'Reduces intestinal permeability' (pending RCT-001 publication). Prohibited claims: any disease treatment or prevention language (FDA dietary supplement regulations)."
+    },
+    {
+      "id": "doc-004",
+      "name": "Subscription & Retention KPI Dashboard — Q3 2026",
+      "workspace_id": "ws-002",
+      "created_by": "James Kwon",
+      "created_at": "2026-10-05T09:00:00Z",
+      "updated_at": "2026-10-05T09:00:00Z",
+      "tags": ["KPIs", "subscription", "retention", "Q3"],
+      "content": "Q3 2026 snapshot: Active subscribers: 8,420 (+18% QOQ). MRR: $464K (+21% QOQ). Average subscription value: $55.10/mo. Monthly churn rate: 4.2% (industry benchmark: 6-8%). LTV:CAC ratio: 4.8x. Top churn reason: 'Too expensive' (38%), 'Results unclear' (27%), 'Pausing' (21%). Win-back flow recovering ~$22K MRR/mo."
+    }
+  ],
+  "forms": [
+    {
+      "id": "frm-001",
+      "name": "New Supplier Intake Form",
+      "board_id": "brd-002",
+      "workspace_id": "ws-001",
+      "is_active": true,
+      "created_at": "2024-04-01T09:00:00Z",
+      "description": "Collects supplier name, certifications, IgG concentration data, farm location, and contact info for new dairy farm partners"
+    },
+    {
+      "id": "frm-002",
+      "name": "Influencer Application Form",
+      "board_id": "brd-005",
+      "workspace_id": "ws-002",
+      "is_active": true,
+      "created_at": "2025-01-15T09:00:00Z",
+      "description": "Inbound form for creators to apply to the PeakVital Creator Program — captures handle, platform, niche, follower count, and content examples"
+    },
+    {
+      "id": "frm-003",
+      "name": "Regulatory Review Request",
+      "board_id": "brd-008",
+      "workspace_id": "ws-003",
+      "is_active": true,
+      "created_at": "2025-06-01T11:00:00Z",
+      "description": "Internal form to submit label claims, marketing copy, or new product language for regulatory and scientific review"
+    }
+  ],
+  "dashboards": [
+    {
+      "id": "dsh-001",
+      "name": "Operations Overview",
+      "workspace_id": "ws-001",
+      "created_at": "2024-06-01T09:00:00Z",
+      "widgets": ["Inventory Status Summary", "Open POs by ETA", "Supplier Audit Calendar", "Upcoming Launch Milestones"]
+    },
+    {
+      "id": "dsh-002",
+      "name": "Marketing Performance",
+      "workspace_id": "ws-002",
+      "created_at": "2024-06-01T09:00:00Z",
+      "widgets": ["Campaign Calendar", "Influencer GMV by Creator", "Email Flow Performance", "Subscription MRR Trend"]
+    },
+    {
+      "id": "dsh-003",
+      "name": "Science & Compliance Tracker",
+      "workspace_id": "ws-003",
+      "created_at": "2024-07-01T11:00:00Z",
+      "widgets": ["Clinical Study Status", "Certification Expiry Calendar", "Pending FDA Submissions", "Approved Claims Registry"]
+    }
+  ],
+  "column_types": [
+    {
+      "name": "status",
+      "type": "dropdown",
+      "values": ["Discovery", "In Development", "Ready to Launch", "Launched", "Active", "Pending Audit", "Under Review", "In Stock", "Low Stock", "Out of Stock", "In Transit", "In Progress", "Planning", "Live", "Awaiting Content", "Content Live", "Prospecting", "Pending FDA Response", "Submitted", "Certified"]
+    }
+  ]
+}
